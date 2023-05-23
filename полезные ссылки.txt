@@ -1,3 +1,4 @@
 http://www.bizagi.com/
 https://www.elma-bpm.ru/bpmn2/7_2.html
 https://www.comindware.ru/blog/нотация-bpmn-2-0-элементы-и-описание/
+check
