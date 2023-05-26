@@ -11,9 +11,10 @@ import lombok.experimental.SuperBuilder;
 @Setter
 @Getter
 @ToString(callSuper = true)
-public class Departure {
+public class BusinessTrips {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
+
 }

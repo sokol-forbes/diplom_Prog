@@ -1,10 +1,10 @@
 package com.diplom.server.dao.entity;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
-@Entity
+@Entity(name = "Accounts")
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -12,5 +12,11 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @ToString(callSuper = true)
 public class Accounts {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Long id;
+
 
 }
