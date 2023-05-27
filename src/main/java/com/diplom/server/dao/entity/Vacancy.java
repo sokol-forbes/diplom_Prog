@@ -12,8 +12,19 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @ToString(callSuper = true)
 public class Vacancy {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(nullable = false)
     private Long id;
+
+    @Column(nullable = false)
+    private String need_experience;
+
+    @Column(nullable = false)
+    private String position;
+
+    @Column(nullable = false)
+    private String description;
+
 }

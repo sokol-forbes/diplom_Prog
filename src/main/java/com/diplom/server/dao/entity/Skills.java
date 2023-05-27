@@ -14,6 +14,13 @@ import lombok.experimental.SuperBuilder;
 public class Skills {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(nullable = false)
     private Long id;
+
+    @Column(nullable = false)
+    private String skills_name;
+
+    @Column(nullable = false)
+    private String grade;
+
 }

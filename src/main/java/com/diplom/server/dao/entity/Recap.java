@@ -14,6 +14,27 @@ import lombok.experimental.SuperBuilder;
 public class Recap {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(nullable = false)
     private Long id;
+
+    @Column(nullable = false)
+    private String surname;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
+    private String patronymic;
+
+    @Column(nullable = false)
+    private String education;
+
+    @Column(nullable = false)
+    private String experience;
+
+    @OneToOne
+    @JoinColumn(name = "vacancy_id", foreignKey = @ForeignKey(name = "FK_vacancy_id_vacancy"))
+    @ToString.Exclude
+    private Vacancy vacancy;
+
 }
