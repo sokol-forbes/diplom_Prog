@@ -1,14 +1,12 @@
 package com.diplom.server.dto.converter;
 
 import com.diplom.server.dao.entity.BusinessTrips;
-import com.diplom.server.dao.entity.Vacation;
 import com.diplom.server.dto.BusinessTripsDto;
-import com.diplom.server.dto.VacationDto;
 
-public class BuissnesTripsConverter implements EntityConverter<BusinessTrips, BusinessTripsDto> {
+public class BusissnesTripsConverter implements EntityConverter<BusinessTrips, BusinessTripsDto> {
 
-    public VacationDto getDto(Vacation entity){
-        return VacationDto.builder()
+    public BusinessTripsDto getDto(BusinessTrips entity){
+        return BusinessTripsDto.builder()
                 .id(entity.getId())
                 .end_date(entity.getEnd_date())
                 .start_date(entity.getStart_date())
@@ -17,12 +15,12 @@ public class BuissnesTripsConverter implements EntityConverter<BusinessTrips, Bu
     }
 
     @Override
-    public Vacation getEntity(VacationDto dto) {
-        Vacation vacation = new Vacation();
-        vacation.setEnd_date(dto.getEnd_date());
-        vacation.setStart_date(dto.getStart_date());
-        vacation.setEmployees(dto.getEmployees());
-        return vacation;
+    public BusinessTrips getEntity(BusinessTripsDto dto) {
+        BusinessTrips businessTrips = new BusinessTrips();
+        businessTrips.setEnd_date(dto.getEnd_date());
+        businessTrips.setStart_date(dto.getStart_date());
+        businessTrips.setEmployees(dto.getEmployees());
+        return businessTrips;
     }
 
 

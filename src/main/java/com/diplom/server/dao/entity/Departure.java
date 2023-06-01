@@ -22,7 +22,7 @@ public class Departure {
     private Long id;
 
     @Column(nullable = false)
-    private String departure_name;
+    private String depaeture_name;
 
     @OneToOne
     @JoinColumn(name = "employees_id", foreignKey = @ForeignKey(name = "FK_employees_id_employees"))

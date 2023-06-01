@@ -1,28 +1,25 @@
 package com.diplom.server.dto.converter;
 
-import com.diplom.server.dao.entity.Vacancy;
-import com.diplom.server.dao.entity.Vacation;
-import com.diplom.server.dto.VacancyDto;
-import com.diplom.server.dto.VacationDto;
+import com.diplom.server.dao.entity.Incentives;
+import com.diplom.server.dto.IncentivesDto;
 
-public class VacationConverter implements EntityConverter<Vacation, VacationDto> {
+public class IncentivesConverter implements EntityConverter<Incentives, IncentivesDto> {
 
-    public VacationDto getDto(Vacation entity){
-        return VacationDto.builder()
+    public IncentivesDto getDto(Incentives entity){
+        return IncentivesDto.builder()
                 .id(entity.getId())
-                .end_date(entity.getEnd_date())
-                .start_date(entity.getStart_date())
+                .date_incentive(entity.getDate_incentive())
                 .employees(entity.getEmployees())
                 .build();
     }
 
     @Override
-    public Vacation getEntity(VacationDto dto) {
-        Vacation vacation = new Vacation();
-        vacation.setEnd_date(dto.getEnd_date());
-        vacation.setStart_date(dto.getStart_date());
-        vacation.setEmployees(dto.getEmployees());
-        return vacation;
+    public Incentives getEntity(IncentivesDto dto) {
+        Incentives incentives = new Incentives();
+
+        incentives.setDate_incentive(dto.getDate_incentive());
+        incentives.setEmployees(dto.getEmployees());
+        return incentives;
     }
 
 

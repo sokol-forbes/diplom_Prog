@@ -1,33 +1,26 @@
 package com.diplom.server.dto.converter;
 
-import com.diplom.server.dao.entity.Departure;
 import com.diplom.server.dao.entity.Recap;
-import com.diplom.server.dto.DepartureDto;
+import com.diplom.server.dao.entity.Skills;
 import com.diplom.server.dto.RecapDto;
+import com.diplom.server.dto.SkillsDto;
 
-public class RecapConverter implements EntityConverter<Recap, RecapDto> {
-    public RecapDto getDto(Recap entity){
-        return RecapDto.builder()
+public class SkillsConverter implements EntityConverter<Skills, SkillsDto> {
+
+    public SkillsDto getDto(Skills entity){
+        return SkillsDto.builder()
                 .id(entity.getId())
-                .surname(entity.getSurname())
-                .name(entity.getName())
-                .patronymic(entity.getPatronymic())
-                .education(entity.getEducation())
-                .experience(entity.getExperience())
-                .vacancy(entity.getVacancy())
+                .skills_name(entity.getSkills_name())
+                .grade(entity.getGrade())
                 .build();
     }
 
     @Override
-    public Recap getEntity(RecapDto dto) {
-        Recap recap = new Recap();
-        recap.setSurname(dto.getSurname());
-        recap.setName(dto.getName());
-        recap.setPatronymic(dto.getPatronymic());
-        recap.setEducation(dto.getEducation());
-        recap.setExperience(dto.getExperience());
-        recap.setVacancy(dto.getVacancy());
-        return recap;
+    public Skills getEntity(SkillsDto dto) {
+        Skills skills = new Skills();
+        skills.setSkills_name(dto.getSkills_name());
+        skills.setGrade(dto.getGrade());
+        return skills;
     }
 
 

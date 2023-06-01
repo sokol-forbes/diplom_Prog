@@ -1,26 +1,28 @@
 package com.diplom.server.dto.converter;
 
-import com.diplom.server.dao.entity.Recap;
 import com.diplom.server.dao.entity.Skills;
-import com.diplom.server.dto.RecapDto;
+import com.diplom.server.dao.entity.Vacancy;
 import com.diplom.server.dto.SkillsDto;
+import com.diplom.server.dto.VacancyDto;
 
-public class SkillsConverter implements EntityConverter<Skills, SkillsDto> {
+public class VacancyConverter implements EntityConverter<Vacancy, VacancyDto> {
 
-    public SkillsDto getDto(Skills entity){
-        return SkillsDto.builder()
+    public VacancyDto getDto(Vacancy entity){
+        return VacancyDto.builder()
                 .id(entity.getId())
-                .skills_name(entity.getSkills_name())
-                .grade(entity.getGrade())
+                .need_experience(entity.getNeed_experience())
+                .position(entity.getPosition())
+                .description(entity.getDescription())
                 .build();
     }
 
     @Override
-    public Skills getEntity(SkillsDto dto) {
-        Skills skills = new Skills();
-        skills.setSkills_name(dto.getSkills_name());
-        skills.setGrade(dto.getGrade());
-        return skills;
+    public Vacancy getEntity(VacancyDto dto) {
+        Vacancy vacancy = new Vacancy();
+        vacancy.setNeed_experience(dto.getNeed_experience());
+        vacancy.setPosition(dto.getPosition());
+        vacancy.setDescription(dto.getDescription());
+        return vacancy;
     }
 
 

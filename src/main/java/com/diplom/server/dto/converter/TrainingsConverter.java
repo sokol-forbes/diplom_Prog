@@ -1,26 +1,33 @@
 package com.diplom.server.dto.converter;
 
-import com.diplom.server.dao.entity.Recap;
 import com.diplom.server.dao.entity.Skills;
-import com.diplom.server.dto.RecapDto;
+import com.diplom.server.dao.entity.Trainings;
 import com.diplom.server.dto.SkillsDto;
+import com.diplom.server.dto.TrainingsDto;
 
-public class SkillsConverter implements EntityConverter<Skills, SkillsDto> {
+public class TrainingsConverter implements EntityConverter<Trainings, TrainingsDto> {
 
-    public SkillsDto getDto(Skills entity){
-        return SkillsDto.builder()
+    public TrainingsDto getDto(Trainings entity){
+        return TrainingsDto.builder()
                 .id(entity.getId())
-                .skills_name(entity.getSkills_name())
-                .grade(entity.getGrade())
+                .place(entity.getPlace())
+                .qualification(entity.getQualification())
+                .start_date(entity.getStart_date())
+                .end_date(entity.getEnd_date())
+                .employees(entity.getEmployees())
                 .build();
     }
 
     @Override
-    public Skills getEntity(SkillsDto dto) {
-        Skills skills = new Skills();
-        skills.setSkills_name(dto.getSkills_name());
-        skills.setGrade(dto.getGrade());
-        return skills;
+    public Trainings getEntity(TrainingsDto dto) {
+        Trainings trainings = new Trainings();
+        trainings.setPlace(dto.getPlace());
+        trainings.setQualification(dto.getQualification());
+        trainings.setStart_date(dto.getStart_date());
+        trainings.setEnd_date(dto.getEnd_date());
+        trainings.setEmployees(dto.getEmployees());
+
+        return trainings;
     }
 
 

@@ -13,7 +13,7 @@ import java.util.Calendar;
 @Setter
 @Getter
 @ToString(callSuper = true)
-public class Incentives {
+public class Vacation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,15 +21,11 @@ public class Incentives {
     private Long id;
 
     @Column(nullable = false)
-    private String incentives;
-
-    @Column(nullable = false)
-    private String qualification;
-
+    @Temporal(TemporalType.DATE)
+    private Calendar end_date;
     @Column(nullable = false)
     @Temporal(TemporalType.DATE)
-    private Calendar date_incentive;
-
+    private Calendar start_date;
 
     @OneToOne
     @JoinColumn(name = "employees_id", foreignKey = @ForeignKey(name = "FK_employees_id_employees"))
