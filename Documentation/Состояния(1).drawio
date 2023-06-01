@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-05-30T09:32:03.588Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0" etag="xUeHae8ExIoDNkqDjHdS" version="21.3.5" type="device">
+<mxfile host="app.diagrams.net" modified="2023-05-31T17:22:34.697Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="fxfpDq-_RkYRZo2TdUl9" version="21.3.2" type="device">
   <diagram name="Страница 1" id="nT9jxlH0TLVJuHRqUTSw">
-    <mxGraphModel dx="1444" dy="1960" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2074" dy="2357" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -25,7 +25,7 @@
             <mxPoint x="510" y="75" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="4flv6Yp_8lDxa1fTArgD-6" value="Аутефикация" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="4flv6Yp_8lDxa1fTArgD-6" value="Авторизация" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="330" y="45" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4flv6Yp_8lDxa1fTArgD-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4flv6Yp_8lDxa1fTArgD-8" target="4flv6Yp_8lDxa1fTArgD-9" edge="1">
